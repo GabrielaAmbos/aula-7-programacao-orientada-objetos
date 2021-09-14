@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 
 namespace aula_7_programacao_orientada_objetos.classes {
     public class Cobranca
@@ -22,5 +20,6 @@ namespace aula_7_programacao_orientada_objetos.classes {
             this.Valor = valor;
             this.DataPagamento = dataPagamento;
         }
+
     }
 }

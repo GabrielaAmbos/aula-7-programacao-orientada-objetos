@@ -8,7 +8,6 @@ class Program
     
     static void Main(string[] args) 
     {
-
         Inicio();
     }
 
@@ -25,7 +24,10 @@ class Program
                 break;
             case 2:
                 AdicionarNovaCobraca();
-                break;    
+                break;
+            case 3:
+                ListarCobrancasVinculadasAUmCliente();
+                break;        
             case 0:
                 Sair();
                 break;
@@ -33,7 +35,7 @@ class Program
                 Console.WriteLine("Opção inválida!!!!");
                 break;
             }
-        Console.WriteLine("Escolha uma opção a seguir: \n[1]-Adicionar novo cliente; \n[2]-Adicionar Nova Cobraça \n[0]-Sair");
+        Console.WriteLine("Escolha uma opção a seguir: \n[1]-Adicionar novo cliente; \n[2]-Adicionar Nova Cobraça \n[3]-Listar dados do cliente \n[0]-Sair");
 
         } while(opcao != 0);
     }
@@ -72,6 +74,16 @@ class Program
 
         Cobranca cobranca = new Cobranca(codigo, dataEmissao, dataVencimento, valor, dataPagamento);
         Clientes[escolha-1].SalvarCobranca(cobranca);
+    }
+
+    private static void ListarCobrancasVinculadasAUmCliente() 
+    {
+         Console.WriteLine("Qual o cliente que você deseja consultar os dados?");
+         for(int i = 0; i < Clientes.Count; i++) {
+            Console.WriteLine("["+(i+1)+"] - " + Clientes[i].Nome);
+        }
+        int escolha = Convert.ToInt32(Console.ReadLine());
+        Clientes[escolha-1].ListarDadosDoCliente();
     }
 
     private static void Sair() {
