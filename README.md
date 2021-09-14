@@ -3,7 +3,7 @@
 Desenvolva um console application que interaja para um controle de um sistema de cobranças onde cada cobrança deve estar vinculada a um cliente, e cada cliente pode ter várias cobranças.
 
 Segue o doc exemplo das cobranças de um cliente. Utilize esse doc para saber quais dados armazenar!
-![enter image description here](https://imgur.com/a/PGgifGw)
+![enter image description here](https://i.imgur.com/u954RWP.png)
 
 
 ### Requisitos
